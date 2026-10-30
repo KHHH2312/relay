@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.1 — 2026-10-30
+
+- Export an environment band as JSON and import one back (256 KB cap, validated shape).
+- Browser check grows to 20.
+
 ## 1.7.0 — 2026-10-30
 
 - Duplicate an environment band with all its variables; the copy is selected immediately.

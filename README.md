@@ -17,7 +17,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 </div>
 
-> **New — 1.7.0** — duplicate an environment band with its variables.
+> **New — 1.8.1** — export and import environment bands as JSON.
 > [Changelog →](CHANGELOG.md)
 
 ---
@@ -36,7 +36,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 |---|---|
 | **Frequency banks** | Searchable collections, folders and requests with duplicate and move controls. |
 | **Request builder** | Method, URL, per-request timeout, query, headers, auth, JSON/text or multipart form data. |
-| **Environments** | Named variable sets, duplicated in one click, substituted through URL, headers, query and body. |
+| **Environments** | Named variable sets with duplicate and JSON export/import, substituted through requests. |
 | **Loopback proxy** | CORS-free sends with timeout, redirect, size caps and metadata-host blocking. |
 | **RX monitor** | Status, time, size, hops, headers, pretty/raw body and save-to-file. |
 | **Transmission log** | The last 50 requests, persisted and clickable. |
@@ -59,7 +59,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Install
 
-1. Download **Relay-1.7.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
+1. Download **Relay-1.8.1-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
 2. Verify it against `SHA256SUMS.txt`:
    ```powershell
    Get-FileHash .\Relay-*-win32-x64.zip -Algorithm SHA256
@@ -80,7 +80,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 ## Verified
 
 - Model/API suite: 79 checks green, including timeout bounds, a real echo server and multipart sends.
-- Browser golden path: 18 checks green — import, duplicate, search, timeout, duplicate a band, send multipart, save.
+- Browser golden path: 20 checks green — cURL import, search, duplicate, timeout, environment export/import, multipart and save.
 - Packaged app passes the source-parity integrity gate and ships with SHA-256 sums and a per-file manifest.
 
 ## Security and privacy
