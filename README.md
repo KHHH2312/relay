@@ -17,7 +17,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 </div>
 
-> **New — 1.1.0** — paste a cURL command and import it as a request.
+> **New — 1.2.0** — multipart form data with real file attachments.
 > [Changelog →](CHANGELOG.md)
 
 ---
@@ -35,19 +35,21 @@ A local API client with a loopback proxy, no account and no cloud sync.
 | | |
 |---|---|
 | **Frequency banks** | Collections, folders and requests with drag-free move controls. |
-| **Request builder** | Method, URL, query, headers, bearer/basic auth, JSON or text body. |
+| **Request builder** | Method, URL, query, headers, bearer/basic auth, JSON/text body or multipart form data with files. |
 | **Environments** | Named variable sets substituted through URL, headers, query and body. |
 | **Loopback proxy** | CORS-free sends with timeout, redirect, size caps and metadata-host blocking. |
 | **RX monitor** | Status, time, size, hops, headers and pretty/raw body. |
 | **Transmission log** | The last 50 requests, persisted and clickable. |
 | **Copy as cURL** | One click from a request to a reproducible command. |
-| **Import cURL** | Paste a curl command; URL, method, headers, auth and body import as a request. |
+| **Import cURL** | Paste a curl command; URL, method, headers, auth, bodies and -F fields import as a request. |
+| **Form uploads** | FORM body with name=value fields and file attachments; multipart boundaries handled by the proxy. |
 | **Import / export** | Collections as JSON; no lock-in. |
 
 <div align="center">
 <img src="docs/relay-env.png" alt="Relay" width="49%">
 <img src="docs/relay-response.png" alt="Relay" width="49%">
 <img src="docs/relay-curl.png" alt="cURL import" width="49%">
+<img src="docs/relay-form.png" alt="Multipart form data" width="49%">
 </div>
 
 ## Requirements
@@ -57,7 +59,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Install
 
-1. Download **Relay-1.1.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
+1. Download **Relay-1.2.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
 2. Verify it against `SHA256SUMS.txt`:
    ```powershell
    Get-FileHash .\Relay-*-win32-x64.zip -Algorithm SHA256
@@ -77,8 +79,8 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Verified
 
-- Model/API suite: 66 checks green, including a real echo server through the proxy.
-- Browser golden path: 8 checks green — create a bank, validate and import a cURL command.
+- Model/API suite: 77 checks green, including a real echo server through the proxy and multipart sends.
+- Browser golden path: 11 checks green — import a cURL command, switch it to FORM, attach a file and send real multipart.
 - Packaged app passes the source-parity integrity gate and ships with SHA-256 sums and a per-file manifest.
 
 ## Security and privacy
