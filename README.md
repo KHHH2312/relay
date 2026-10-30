@@ -17,7 +17,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 </div>
 
-> **New — 1.5.0** — search requests and folders by name.
+> **New — 1.6.0** — a per-request timeout in seconds.
 > [Changelog →](CHANGELOG.md)
 
 ---
@@ -35,7 +35,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 | | |
 |---|---|
 | **Frequency banks** | Searchable collections, folders and requests with duplicate and move controls. |
-| **Request builder** | Method, URL, query, headers, bearer/basic auth, JSON/text body or multipart form data with files. |
+| **Request builder** | Method, URL, per-request timeout, query, headers, auth, JSON/text or multipart form data. |
 | **Environments** | Named variable sets substituted through URL, headers, query and body. |
 | **Loopback proxy** | CORS-free sends with timeout, redirect, size caps and metadata-host blocking. |
 | **RX monitor** | Status, time, size, hops, headers, pretty/raw body and save-to-file. |
@@ -59,7 +59,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Install
 
-1. Download **Relay-1.5.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
+1. Download **Relay-1.6.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
 2. Verify it against `SHA256SUMS.txt`:
    ```powershell
    Get-FileHash .\Relay-*-win32-x64.zip -Algorithm SHA256
@@ -79,8 +79,8 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Verified
 
-- Model/API suite: 77 checks green, including a real echo server through the proxy and multipart sends.
-- Browser golden path: 16 checks green — import and duplicate a cURL request, search the tree, send multipart, save the response.
+- Model/API suite: 79 checks green, including timeout bounds, a real echo server and multipart sends.
+- Browser golden path: 17 checks green — import, duplicate, search, set a timeout, send multipart, save the response.
 - Packaged app passes the source-parity integrity gate and ships with SHA-256 sums and a per-file manifest.
 
 ## Security and privacy

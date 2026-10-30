@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.0 — 2026-10-30
+
+- Per-request timeout in seconds (1-120), saved with the request and honoured by the proxy.
+- History records the timeout used; suite grows to 79 checks, browser path to 17.
+
 ## 1.5.0 — 2026-10-30
 
 - Search the request tree by name; matches auto-expand, no-match state, Escape clears.
