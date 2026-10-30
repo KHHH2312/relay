@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.0 — 2026-10-30
+
+- Search the request tree by name; matches auto-expand, no-match state, Escape clears.
+- Browser check grows to 16.
+
 ## 1.4.0 — 2026-10-30
 
 - Duplicate a request in place with a fresh id and the same method, URL, headers, auth and body.
