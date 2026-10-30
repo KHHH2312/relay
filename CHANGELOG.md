@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.0 — 2026-10-30
+
+- Duplicate an environment band with all its variables; the copy is selected immediately.
+- Browser check grows to 18.
+
 ## 1.6.0 — 2026-10-30
 
 - Per-request timeout in seconds (1-120), saved with the request and honoured by the proxy.
