@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.9.0 — 2026-10-30
+
+- {{variable}} autocomplete in the URL field from the active environment.
+- Browser check grows to 22.
+
 ## 1.8.1 — 2026-10-30
 
 - Export an environment band as JSON and import one back (256 KB cap, validated shape).
