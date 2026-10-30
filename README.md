@@ -17,7 +17,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 </div>
 
-> **New — 1.2.0** — multipart form data with real file attachments.
+> **New — 1.3.0** — save any response body straight to a file.
 > [Changelog →](CHANGELOG.md)
 
 ---
@@ -38,7 +38,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 | **Request builder** | Method, URL, query, headers, bearer/basic auth, JSON/text body or multipart form data with files. |
 | **Environments** | Named variable sets substituted through URL, headers, query and body. |
 | **Loopback proxy** | CORS-free sends with timeout, redirect, size caps and metadata-host blocking. |
-| **RX monitor** | Status, time, size, hops, headers and pretty/raw body. |
+| **RX monitor** | Status, time, size, hops, headers, pretty/raw body and save-to-file. |
 | **Transmission log** | The last 50 requests, persisted and clickable. |
 | **Copy as cURL** | One click from a request to a reproducible command. |
 | **Import cURL** | Paste a curl command; URL, method, headers, auth, bodies and -F fields import as a request. |
@@ -59,7 +59,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Install
 
-1. Download **Relay-1.2.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
+1. Download **Relay-1.3.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
 2. Verify it against `SHA256SUMS.txt`:
    ```powershell
    Get-FileHash .\Relay-*-win32-x64.zip -Algorithm SHA256
@@ -80,7 +80,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 ## Verified
 
 - Model/API suite: 77 checks green, including a real echo server through the proxy and multipart sends.
-- Browser golden path: 11 checks green — import a cURL command, switch it to FORM, attach a file and send real multipart.
+- Browser golden path: 12 checks green — import a cURL command, switch it to FORM, attach a file, send real multipart and save the response.
 - Packaged app passes the source-parity integrity gate and ships with SHA-256 sums and a per-file manifest.
 
 ## Security and privacy

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0 — 2026-10-30
+
+- Save any response body to a file; the name comes from the target path and Content-Type.
+- Browser check grows to 12 and verifies the download.
+
 ## 1.2.0 — 2026-10-30
 
 - FORM bodies: name=value fields plus file attachments, sent as real multipart data.
