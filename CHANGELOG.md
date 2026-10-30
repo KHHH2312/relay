@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.0 — 2026-10-30
+
+- Duplicate a request in place with a fresh id and the same method, URL, headers, auth and body.
+- Browser check grows to 13.
+
 ## 1.3.0 — 2026-10-30
 
 - Save any response body to a file; the name comes from the target path and Content-Type.

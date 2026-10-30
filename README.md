@@ -17,7 +17,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 </div>
 
-> **New — 1.3.0** — save any response body straight to a file.
+> **New — 1.4.0** — duplicate a request in place from the tree toolbar.
 > [Changelog →](CHANGELOG.md)
 
 ---
@@ -34,7 +34,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 | | |
 |---|---|
-| **Frequency banks** | Collections, folders and requests with drag-free move controls. |
+| **Frequency banks** | Collections, folders and requests with duplicate and drag-free move controls. |
 | **Request builder** | Method, URL, query, headers, bearer/basic auth, JSON/text body or multipart form data with files. |
 | **Environments** | Named variable sets substituted through URL, headers, query and body. |
 | **Loopback proxy** | CORS-free sends with timeout, redirect, size caps and metadata-host blocking. |
@@ -59,7 +59,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Install
 
-1. Download **Relay-1.3.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
+1. Download **Relay-1.4.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
 2. Verify it against `SHA256SUMS.txt`:
    ```powershell
    Get-FileHash .\Relay-*-win32-x64.zip -Algorithm SHA256
@@ -80,7 +80,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 ## Verified
 
 - Model/API suite: 77 checks green, including a real echo server through the proxy and multipart sends.
-- Browser golden path: 12 checks green — import a cURL command, switch it to FORM, attach a file, send real multipart and save the response.
+- Browser golden path: 13 checks green — import and duplicate a cURL request, send multipart, save the response.
 - Packaged app passes the source-parity integrity gate and ships with SHA-256 sums and a per-file manifest.
 
 ## Security and privacy
