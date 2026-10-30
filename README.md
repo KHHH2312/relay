@@ -17,7 +17,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 </div>
 
-> **New — 1.11.0** — unresolved variables warn before send; Ctrl+F finds text in the response.
+> **New — 1.12.1** — a COOKIES tab, verified explicit Cookie headers, variable preflight and response find.
 > [Changelog →](CHANGELOG.md)
 
 ---
@@ -38,7 +38,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 | **Request builder** | Method, URL, per-request timeout, headers, auth, JSON/text or multipart form data. |
 | **Environments** | Named variable sets with {{autocomplete}}, duplicate and JSON export/import; unresolved variables warn before send and link to the manager. |
 | **Loopback proxy** | CORS-free sends with timeout, redirect, size caps and metadata-host blocking. |
-| **RX monitor** | Status, time, size, hops, headers, pretty/raw body, Ctrl+F find with match highlights and a save-to-file button. |
+| **RX monitor** | Status, time, size, hops, headers, parsed Set-Cookie lines, pretty/raw body, Ctrl+F find and a save-to-file button. |
 | **Transmission log** | The last 50 requests, persisted and clickable. |
 | **Copy as cURL** | One click from a request to a reproducible command. |
 | **Import cURL** | Paste a curl command; URL, method, headers, auth and body import as a request. |
@@ -57,7 +57,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Install
 
-1. Download **Relay-1.11.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
+1. Download **Relay-1.12.1-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
 2. Verify it against `SHA256SUMS.txt`:
    ```powershell
    Get-FileHash .\Relay-*-win32-x64.zip -Algorithm SHA256
@@ -77,8 +77,8 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Verified
 
-- Model/API suite: 79 checks green, including a real echo server through the proxy.
-- Browser golden path: 30 checks green — cURL import, environment export/import, unresolved-variable preflight, multipart send, response save and find-in-body.
+- Model/API suite: 83 checks green, including explicit Cookie forwarding and cURL -b import.
+- Browser golden path: 33 checks green — Set-Cookie parsing, cURL import, variable preflight, multipart send, response save and find-in-body.
 - Earlier flow: 200 / 5 ms / 307 B response, no console exceptions.
 - Packaged app passes the source-parity integrity gate and ships with SHA-256 sums and a per-file manifest.
 
