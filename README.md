@@ -17,7 +17,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 </div>
 
-> **New — 1.0.0** — frequency banks · request builder · environments · loopback proxy.
+> **New — 1.1.0** — paste a cURL command and import it as a request.
 > [Changelog →](CHANGELOG.md)
 
 ---
@@ -41,11 +41,13 @@ A local API client with a loopback proxy, no account and no cloud sync.
 | **RX monitor** | Status, time, size, hops, headers and pretty/raw body. |
 | **Transmission log** | The last 50 requests, persisted and clickable. |
 | **Copy as cURL** | One click from a request to a reproducible command. |
+| **Import cURL** | Paste a curl command; URL, method, headers, auth and body import as a request. |
 | **Import / export** | Collections as JSON; no lock-in. |
 
 <div align="center">
 <img src="docs/relay-env.png" alt="Relay" width="49%">
 <img src="docs/relay-response.png" alt="Relay" width="49%">
+<img src="docs/relay-curl.png" alt="cURL import" width="49%">
 </div>
 
 ## Requirements
@@ -55,7 +57,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Install
 
-1. Download **Relay-1.0.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
+1. Download **Relay-1.1.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
 2. Verify it against `SHA256SUMS.txt`:
    ```powershell
    Get-FileHash .\Relay-*-win32-x64.zip -Algorithm SHA256
@@ -75,8 +77,8 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Verified
 
-- Model/API suite: 52 checks green, including a real echo server through the proxy.
-- Browser golden flow: 200 / 5 ms / 307 B response, no console exceptions.
+- Model/API suite: 66 checks green, including a real echo server through the proxy.
+- Browser golden path: 8 checks green — create a bank, validate and import a cURL command.
 - Packaged app passes the source-parity integrity gate and ships with SHA-256 sums and a per-file manifest.
 
 ## Security and privacy
