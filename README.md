@@ -17,7 +17,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 </div>
 
-> **New — 1.15.0** — copy any request as a PowerShell Invoke-RestMethod snippet, forms included.
+> **New — 1.16.0** — environments that extend a parent band and inherit its variables.
 > [Changelog →](CHANGELOG.md)
 
 ---
@@ -36,7 +36,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 |---|---|
 | **Frequency banks** | Searchable collections, folders and requests with duplicate and move controls. |
 | **Request builder** | Method, URL, per-request timeout, headers, auth, JSON/text or multipart form data. |
-| **Environments** | Named variable sets with {{autocomplete}}, duplicate and JSON export/import; unresolved variables warn before send and link to the manager. |
+| **Environments** | Named variable sets with {{autocomplete}}, duplicate and JSON export/import; a band can extend a parent and inherit its variables; unresolved variables warn before send and link to the manager. |
 | **Loopback proxy** | CORS-free sends with timeout, redirect, size caps and metadata-host blocking. |
 | **RX monitor** | Status, time, size, hops, headers, parsed cookies, a collapsible JSON tree, pretty/raw body, Ctrl+F find and save-to-file. |
 | **Transmission log** | The last 50 requests, persisted and clickable. |
@@ -57,7 +57,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Install
 
-1. Download **Relay-1.15.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
+1. Download **Relay-1.16.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
 2. Verify it against `SHA256SUMS.txt`:
    ```powershell
    Get-FileHash .\Relay-*-win32-x64.zip -Algorithm SHA256
@@ -77,8 +77,8 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Verified
 
-- Model/API suite: 89 checks green, including cookie forwarding, fetch and PowerShell snippets and the echo proxy.
-- Browser golden path: 38 checks green — copy-as-fetch, copy-as-PowerShell, JSON tree, cookies, preflight, multipart send and find-in-body.
+- Model/API suite: 100 checks green, including nested environment inheritance, cycle refusal, cookie forwarding, fetch and PowerShell snippets and the echo proxy.
+- Browser golden path: 44 checks green — nested bands inheriting into the variable picker, copy-as-fetch, copy-as-PowerShell, JSON tree, cookies, preflight, multipart send and find-in-body.
 - Earlier flow: 200 / 5 ms / 307 B response, no console exceptions.
 - Packaged app passes the source-parity integrity gate and ships with SHA-256 sums and a per-file manifest.
 
