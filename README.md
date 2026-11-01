@@ -17,7 +17,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 </div>
 
-> **New — 1.18.0** — API key auth - header or query string, with variables.
+> **New — 1.19.0** — snippets verified to carry auth - copied cURL, fetch and PowerShell include bearer, basic and API keys.
 > [Changelog →](CHANGELOG.md)
 
 ---
@@ -59,7 +59,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Install
 
-1. Download **Relay-1.18.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
+1. Download **Relay-1.19.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
 2. Verify it against `SHA256SUMS.txt`:
    ```powershell
    Get-FileHash .\Relay-*-win32-x64.zip -Algorithm SHA256
@@ -79,8 +79,8 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Verified
 
-- Model/API suite: 128 checks green, including nested environment inheritance, cycle refusal, cookie forwarding, fetch and PowerShell snippets and the echo proxy.
-- Browser golden path: 55 checks green — API key sent as a header and as a query parameter through the real proxy, mock station, nested environments, copy as PowerShell/fetch, cookie tab, JSON tree.
+- Model/API suite: 134 checks green, including nested environment inheritance, cycle refusal, cookie forwarding, fetch and PowerShell snippets and the echo proxy.
+- Browser golden path: 56 checks green — API key sent as a header and as a query parameter through the real proxy, mock station, nested environments, copy as PowerShell/fetch, cookie tab, JSON tree.
 - Earlier flow: 200 / 5 ms / 307 B response, no console exceptions.
 - Packaged app passes the source-parity integrity gate and ships with SHA-256 sums and a per-file manifest.
 
