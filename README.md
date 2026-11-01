@@ -17,7 +17,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 </div>
 
-> **New — 1.16.0** — environments that extend a parent band and inherit its variables.
+> **New — 1.17.0** — a local mock station under /mock — routes you define, or responses you save.
 > [Changelog →](CHANGELOG.md)
 
 ---
@@ -41,6 +41,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 | **RX monitor** | Status, time, size, hops, headers, parsed cookies, a collapsible JSON tree, pretty/raw body, Ctrl+F find and save-to-file. |
 | **Transmission log** | The last 50 requests, persisted and clickable. |
 | **Copy as cURL / fetch / PowerShell** | One click from a request to a reproducible curl command, an await fetch() snippet or a PowerShell Invoke-RestMethod block, with headers, auth and bodies. |
+| **Mock station** | Answer local apps from saved routes: method, path with :params, status, headers, body and delay, served on 127.0.0.1 under /mock. Save any real response as a mock in one click. |
 | **Import cURL** | Paste a curl command; URL, method, headers, auth and body import as a request. |
 | **Import / export** | Collections as JSON; no lock-in. |
 
@@ -57,7 +58,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Install
 
-1. Download **Relay-1.16.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
+1. Download **Relay-1.17.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
 2. Verify it against `SHA256SUMS.txt`:
    ```powershell
    Get-FileHash .\Relay-*-win32-x64.zip -Algorithm SHA256
