@@ -17,7 +17,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 </div>
 
-> **New — 1.17.0** — a local mock station under /mock — routes you define, or responses you save.
+> **New — 1.18.0** — API key auth - header or query string, with variables.
 > [Changelog →](CHANGELOG.md)
 
 ---
@@ -44,6 +44,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 | **Mock station** | Answer local apps from saved routes: method, path with :params, status, headers, body and delay, served on 127.0.0.1 under /mock. Save any real response as a mock in one click. |
 | **Import cURL** | Paste a curl command; URL, method, headers, auth and body import as a request. |
 | **Import / export** | Collections as JSON; no lock-in. |
+| **API key auth** | A fourth auth kind: name the key, paste the value (or a {{variable}}), and choose whether it rides as a header or a query parameter. It replaces a header row of the same name instead of doubling up. |
 
 <div align="center">
 <img src="docs/relay-env.png" alt="Relay" width="49%">
@@ -58,7 +59,7 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Install
 
-1. Download **Relay-1.17.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
+1. Download **Relay-1.18.0-win32-x64.zip** from [Releases](https://github.com/KHHH2312/relay/releases/latest).
 2. Verify it against `SHA256SUMS.txt`:
    ```powershell
    Get-FileHash .\Relay-*-win32-x64.zip -Algorithm SHA256
@@ -78,8 +79,8 @@ A local API client with a loopback proxy, no account and no cloud sync.
 
 ## Verified
 
-- Model/API suite: 100 checks green, including nested environment inheritance, cycle refusal, cookie forwarding, fetch and PowerShell snippets and the echo proxy.
-- Browser golden path: 44 checks green — nested bands inheriting into the variable picker, copy-as-fetch, copy-as-PowerShell, JSON tree, cookies, preflight, multipart send and find-in-body.
+- Model/API suite: 128 checks green, including nested environment inheritance, cycle refusal, cookie forwarding, fetch and PowerShell snippets and the echo proxy.
+- Browser golden path: 55 checks green — API key sent as a header and as a query parameter through the real proxy, mock station, nested environments, copy as PowerShell/fetch, cookie tab, JSON tree.
 - Earlier flow: 200 / 5 ms / 307 B response, no console exceptions.
 - Packaged app passes the source-parity integrity gate and ships with SHA-256 sums and a per-file manifest.
 
